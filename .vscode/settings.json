@@ -1,0 +1,13 @@
+{
+    "editor.inlineSuggest.enabled": true,
+    "containers.commands.runInteractive": "${containerCommand} run --rm -it ${exposedPorts} ${tag}",
+    "containers.commands.run": "${containerCommand} run --rm -d ${exposedPorts} ${tag}",
+    "containers.commands.composeUp": [
+
+        {
+            "label": "Compose Up",
+            "template": "${composeCommand} ${configurationFile} up ${detached} ${build}"
+        }
+    ],
+    "containers.commands.attach": "${containerCommand} exec -it ${containerId} ${shellCommand}"
+}
